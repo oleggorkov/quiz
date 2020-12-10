@@ -1,0 +1,717 @@
+.calc-block {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  margin-top: 8rem;
+  padding: 0 1rem;
+
+  border-radius: 0.6rem;
+  background: url("../img/background-2.png") no-repeat center top;
+
+  @include above($desktop) {
+    padding: 0;
+    background: url("../img/background-2.png") no-repeat center center;
+  }
+
+  @include above($mid-desktop) {
+    width: 121.2rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
+  }
+
+  &__phone {
+    width: 20rem;
+    position: absolute;
+    display: none;
+    z-index: 5;
+    top: 67.3rem;
+    left: 0;
+
+    @include above($tablet-landscape) {
+      display: flex;
+    }
+
+    @include above($desktop) {
+      width: 25rem;
+      top: 7.3rem;
+    }
+
+    @include above($mid-desktop) {
+      width: auto;
+      left: -6.7rem;
+    }
+  }
+
+  &__present {
+    width: 27.3rem;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.5rem;
+
+    @include above($tablet) {
+      margin-top: 0;
+      position: absolute;
+      right: 0;
+      top: 17.7rem;
+    }
+
+    @include above($desktop) {
+      right: 4.3rem;
+    }
+
+    &-title {
+      width: 100%;
+      height: 4rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+
+      background: $helper-orange-light;
+      box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
+      border-radius: 0.6rem 0.6rem 0 0;
+      font-size: 2.2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.8rem;
+      color: $main-black;
+
+      @include above($tablet) {
+        height: 5.4rem;
+      }
+
+      img {
+        position: absolute;
+        top: -4rem;
+        right: -5.5rem;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      height: 15rem;
+
+      @include above($tablet) {
+        height: auto;
+      }
+    }
+
+    &-surprise {
+      width: 100%;
+      height: auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      background: $helper-orange-dark;
+      box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
+      border-radius: 0.6rem;
+
+      &-shell {
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.8rem;
+        color: #FFFFFF;
+
+        padding: 1rem 0;
+      }
+
+      &-extra {
+        width: 24.6rem;
+        height: 5.1rem;
+
+        display: flex;
+        align-items: center;
+
+        padding: 0.7rem 0.4rem 1rem 0.9rem;
+
+        background: #FFFFFF;
+        border: 0.1rem solid #FFFFFF;
+        box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+        border-radius: 0.6rem;
+
+        svg {
+          width: 2.6rem;
+          height: 2.9rem;
+          fill: $helper-orange-dark;
+        }
+
+        &-text {
+          font-size: 1.4rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 1.8rem;
+          color: $helper-orange-dark;
+
+          margin-left: 0.5rem;
+        }
+      }
+
+      p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.9rem;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #FFFFFF;
+        text-align: center;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.8rem;
+      text-align: center;
+
+      margin-top: 1.5rem;
+    }
+
+  }
+
+  &__title {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $main-black;
+    text-align: center;
+
+    margin-top: 7.6rem;
+
+    @include above($tablet) {
+      font-size: 2rem;
+      line-height: 2.8rem;
+    }
+
+    span {
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 2rem;
+
+      @include above($tablet) {
+        font-size: 2rem;
+        line-height: 2.8rem;
+      }
+    }
+  }
+
+  &__progress {
+    width: 27rem;
+    height: 3rem;
+    max-width: 100%;
+
+    border-radius: 8rem;
+    background: #FFFFFF;
+    position: relative;
+    margin-top: 2.3rem;
+
+    @include above($phone) {
+      width: 35rem;
+    }
+
+    @include above($mobile) {
+      width: 45rem;
+    }
+
+    @include above($tablet) {
+      width: 59.2rem;
+    }
+
+    &-steps {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      z-index: 9;
+
+      font-size: 2rem;
+      line-height: 2.4rem;
+      color: $main-black;
+      text-align: center;
+
+      span {
+        margin-right: 0.5rem;
+      }
+    }
+
+    &-bar {
+      border-radius: 4rem 0 0 4rem;
+      width: 20%;
+      overflow: hidden;
+      height: 100%;
+      position: relative;
+      background: $light-orange;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(-45deg,$light-orange 25%,$main-orange 0,$main-orange 50%,$light-orange 0,$light-orange 75%,$main-orange 0,$main-orange);
+        -webkit-background-size: 2rem 2rem;
+        -webkit-animation: move 2s linear infinite;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+    z-index: 10;
+
+    @include above($tablet) {
+      align-items: flex-start;
+      margin-top: 2.6rem;
+    }
+
+    @include above($desktop) {
+      align-items: center;
+    }
+
+    &-title {
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 2.2rem;
+      color: $main-black;
+      text-align: center;
+
+      margin-top: 2rem;
+
+      @include above($tablet) {
+        font-size: 3rem;
+        line-height: 3.8rem;
+        margin-top: 5.5rem;
+      }
+
+      @include above($desktop) {
+        padding-left: 23.5rem;
+      }
+    }
+
+    &-small-title {
+      height: auto;
+
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 2rem;
+      text-align: center;
+
+      margin-top: 2rem;
+
+      @include above($tablet) {
+        text-align: left;
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+        margin-top: 8.8rem;
+      }
+
+      @include above($desktop) {
+        width: 100%;
+        padding-left: 33.7rem;
+      }
+    }
+
+    &-list {
+      height: auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      margin-top: 1.5rem;
+
+      @include above($tablet) {
+        margin-bottom: 3rem;
+      }
+
+      @include above($desktop) {
+        width: 100%;
+        padding-left: 33.7rem;
+      }
+
+      li {
+        width: 100%;
+        height: 2.8rem;
+
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+        position: relative;
+
+        @include above($tablet) {
+          width: auto;
+          justify-content: center;
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: 0.7rem;
+
+          @include above($tablet) {
+            margin-bottom: 1.7rem;
+          }
+        }
+
+        label {
+          cursor: pointer;
+
+          font-size: 1.2rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 1.8rem;
+
+          padding-left: 2.8rem;
+
+          @include above($phone) {
+            font-size: 1.6rem;
+          }
+
+          @include above($tablet) {
+            display: flex;
+            font-size: 2rem;
+            line-height: 2.8rem;
+            padding-left: 3.8rem;
+          }
+
+          &:before {
+            position: absolute;
+            content: '';
+            border: 0.1rem solid $helper-orange;
+            border-radius: 50%;
+            width: 1.8rem;
+            height: 1.8rem;
+            left: 0;
+
+            @include above($tablet) {
+              width: 2.8rem;
+              height: 2.8rem;
+            }
+          }
+
+          &:after {
+            position: absolute;
+            content: '';
+            background: $helper-orange;
+            border-radius: 50%;
+            width: 1rem;
+            height: 1rem;
+            left: 0.5rem;
+            top: 1rem;
+            opacity: 0;
+
+            @include above($tablet) {
+              width: 1.6rem;
+              height: 1.6rem;
+              left: 0.7rem;
+              top: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+
+    &-cost {
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.8rem;
+      text-align: center;
+      color: $main-black;
+
+      margin-top: 2.9rem;
+
+      @include above($tablet) {
+        font-size: 2rem;
+        line-height: 2.7rem;
+      }
+    }
+
+    span {
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.8rem;
+      text-align: center;
+
+      margin-bottom: 2rem;
+
+      @include above($tablet) {
+        margin-bottom: 8.6rem;
+        font-size: 2rem;
+        line-height: 2.7rem;
+      }
+    }
+
+    &-footer {
+      width: 100%;
+      height: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+
+      @include above($tablet-landscape) {
+        flex-direction: row;
+        padding: 0 6.5rem 0 5.2rem;
+      }
+
+      p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.6rem;
+        color: $main-gray;
+        margin-bottom: 2rem;
+
+        @include above($tablet-landscape) {
+          font-size: 1.8rem;
+          line-height: 2.1rem;
+          margin-bottom: 4.8rem;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.6rem;
+        color: $main-gray;
+
+        margin-bottom: 1rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        @include above($tablet-landscape) {
+          font-size: 1.8rem;
+          line-height: 2.1rem;
+          margin-bottom: 4.8rem;
+        }
+      }
+    }
+
+    &-spinner {
+      width: 6rem;
+      height: 6rem;
+
+      margin-top: 2rem;
+
+      @include above($tablet) {
+        width: 9.2rem;
+        height: 9.2rem;
+        margin-top: 4.9rem;
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      height: auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+
+      margin-top: 2rem;
+
+      @include above($tablet) {
+        margin-top: 4.8rem;
+        align-items: flex-start;
+      }
+
+      @include above($tablet-landscape) {
+        padding-left: 17.2rem;
+      }
+
+      @include above($desktop) {
+        padding-left: 29.2rem;
+      }
+
+      img {
+        display: none;
+        position: absolute;
+        left: 38.5rem;
+        top: 12rem;
+
+        @include above($tablet) {
+          display: flex;
+        }
+
+        @include above($tablet-landscape) {
+          left: 54.5rem;
+        }
+
+        @include above($desktop) {
+          left: 66.5rem;
+        }
+      }
+
+      input {
+        width: 27.5rem;
+        height: 4rem;
+
+        text-align: center;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.6rem;
+        color: $main-black;
+
+        background: #FFFFFF;
+        border: 0.1rem solid $main-orange;
+        border-radius: 6rem;
+
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        @include above($tablet) {
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          width: 35.3rem;
+          height: 6.4rem;
+        }
+      }
+
+      &-rezult {
+        width: 27.5rem;
+        height: 4rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: linear-gradient(180deg, $lighter-orange 0%, $main-orange 100%);
+        box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.6);
+        border-radius: 6rem;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 1.8rem;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        border: none;
+
+        margin-top: 1.5rem;
+
+        @include above($tablet) {
+          font-size: 2rem;
+          line-height: 2.1rem;
+          width: 35.3rem;
+          height: 7.2rem;
+          margin-top: 2.7rem;
+        }
+
+        &:hover {
+          background: linear-gradient(180deg, $lighter-orange 0%, $lighter-orange 100%);
+        }
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+
+    &-info {
+      height: auto;
+
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.4rem;
+      text-align: center;
+
+      margin-top: 1.5rem;
+
+      @include above($tablet) {
+        text-align: left;
+        margin-top: 3.5rem;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+      }
+
+      @include above($desktop) {
+        width: 100%;
+        padding-left: 37.5rem;
+      }
+    }
+  }
+}
+
+input[type=radio]:checked + label:after {
+  opacity: 1;
+}
+
+.section__wrap {
+  width: 100%;
+  max-width: 150rem;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 10rem;
+
+  padding: 0 2rem;
+}
+
+@-webkit-keyframes move {
+  0% {
+    background-position:2rem 0}
+  to {
+    background-position:0 0
+  }
+}
+
+

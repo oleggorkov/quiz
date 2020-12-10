@@ -1,0 +1,60 @@
+include ../helper-mixins/svg-mix
+
+block calc-block
+    section.section
+        .section__wrap
+            .calc-block
+                img(src='img/phone.png').calc-block__phone
+                .calc-block__title Рассчитайте стоимость вашей кухни в 3-х комплектациях:
+                    span «Эксклюзивная», «Богатая» и «Хорошая»
+                .calc-block__progress
+                    .calc-block__progress-steps
+                        span(id='current_step') 1
+                        | из 5
+                    .calc-block__progress-bar
+                div(id='score').calc-block__content
+                    .calc-block__content-title Мы уже приступили к расчёту стоимости кухни!
+                    .calc-block__present
+                        .calc-block__present-title Ваш подарок
+                            img(src='img/bow.png')
+                        img(src='img/shell.png').calc-block__present-image
+                        .calc-block__present-surprise
+                            .calc-block__present-surprise-shell Кухонная мойка
+                            .calc-block__present-surprise-extra
+                                +svg-mix('present')
+                                .calc-block__present-surprise-extra-text
+                                    strong + СЮРПРИЗ!&nbsp
+                                    | Петли<br>с доводчиками на всю кухню
+                            p подарок будет забронирован<br> за вашим номером
+                        p Этот подарок вы получите, если<br> закажете кухню у нас
+                    .calc-block__content-small-title Как вам удобнее получить результат?
+                    ul.calc-block__content-list
+                        li
+                            input(id='whattsapp' type='radio' name='messenger' value='WhattsApp')
+                            label(for='whattsapp') Пришлите расчет в
+                                strong &nbspWhatsApp
+                        li
+                            input(id='sms' type='radio' name='messenger' value='sms')
+                            label(for='sms') Пришлите расчет ссылкой в
+                                strong &nbspSMS
+                        li
+                            input(id='callme' checked type='radio' name='messenger' value='callme')
+                            label(for='callme') Перезвоните, у меня остались вопросы
+                    .calc-block__content-info Введите номер телефона и<br> получите расчет кухни в 3-х комплектациях
+                    form(action='mail.php' method='POST').calc-block__content-btn
+                        input(type='tel' name='user_phone' placeholder='_(___)___-__-__' id='phone')
+                        button(type='submit').calc-block__content-btn-rezult получить результат
+                        img(src='img/arrow-right.png')
+                    .calc-block__content-spinner
+                        svg(id="animated" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg")
+                            circle(cx="50" cy="50" r="45" fill="#FFFFFF")
+                            path(fill="none" stroke-linecap="round" stroke-width="10" stroke="#FFC804" stroke-dasharray="251.2,0" d="M50 10 a 40 40 0 0 1 0 80 a 40 40 0 0 1 0 -80")
+                                animate(attributeName="stroke-dasharray" from="0,251.2" to="251.2,0" dur="5s")
+                            text(id="count" x="50" y="50" text-anchor="middle" dy="7" font-size="20" fill='#FFC804') 100%
+                    .calc-block__content-cost Стоимость кухни в 3-х комплектациях сформирована.
+                    span Она откроется сразу после регистрации
+                    .calc-block__content-footer
+                        a(href='#') ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+                        p Разработано в Quiz24.ru
+
+

@@ -1,0 +1,97 @@
+*{
+  font-family: 'Museo Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,ol{
+  list-style: none;
+  margin: 0;
+}
+
+html{
+  font-size: 62.5%;
+
+  @include above(2560px) {
+    font-size: 93.75%;
+  }
+}
+
+h1{
+  font-weight: normal;
+}
+
+h2{
+  font-weight: normal;
+}
+
+a{
+  text-decoration: none;
+  border-bottom: none;
+  color: black;
+  &:focus{
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+
+button{
+  border: 1px solid black;
+  background: transparent;
+  cursor: pointer;
+
+  font-family: 'Museo Sans', sans-serif;
+
+  &:focus{
+    outline: none;
+    a{
+      outline: none;
+      text-decoration: none!important;
+    }
+  }
+
+  a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input{
+  -moz-appearance:textfield;
+  &:focus{
+    outline: none;
+  }
+}
+
+svg{
+  transition: all ease 0.25s;
+}
+
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=radio] {
+  display: none;
+}

@@ -1,0 +1,371 @@
+.kitchen {
+  width: 100%;
+  max-width: 121.2rem;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 1rem;
+
+  @include above($mobile) {
+    background: url("../img/kitchen.png") 36rem 0 no-repeat;
+    margin-top: 5rem;
+  }
+
+  @include above($tablet) {
+    padding: 0 2rem;
+  }
+
+  &__title {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include above($tablet) {
+      align-items: flex-start;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 3.8rem;
+      text-align: center;
+      color: $main-black;
+
+      @include above($tablet) {
+        font-size: 4.5rem;
+        line-height: 5.4rem;
+        text-align: left;
+      }
+    }
+
+    p {
+      font-family:'Roboto', sans-serif;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 3.8rem;
+      text-align: center;
+      color: $main-orange;
+
+      @include above($tablet) {
+        font-size: 4.5rem;
+        line-height: 5.3rem;
+        text-align: left;
+      }
+    }
+  }
+
+  &__trends {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+
+    font-family:'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    text-align: left;
+
+    margin-top: 0.5rem;
+
+    @include above($tablet) {
+      font-size: 3.3rem;
+      line-height: 2.8rem;
+      margin-top: 5.5rem;
+      justify-content: flex-start;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    position: relative;
+
+    margin-top: 3.1rem;
+
+    @include above($phone) {
+      flex-direction: row;
+      margin-top: 7.1rem;
+    }
+
+    &-arrow {
+      display: none;
+      position: absolute;
+      left: 15.6rem;
+      top: -6.3rem;
+
+      @include above($phone) {
+        display: flex;
+      }
+    }
+
+    &-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 1rem;
+
+      @include above($phone) {
+        margin-bottom: 0;
+      }
+
+      &-cab {
+        height: auto;
+
+        @include above($phone) {
+          padding-left: 2rem;
+        }
+
+        @include above($mobile) {
+          padding-left: 3.5rem;
+        }
+      }
+
+      &-use {
+        position: absolute;
+        top: -2.8rem;
+        left: 3.7rem;
+
+        @include above($phone) {
+          left: 0;
+        }
+      }
+    }
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: center;
+
+      margin-top: 1rem;
+
+      @include above($phone) {
+        align-self: flex-start;
+        margin-left: 2.8rem;
+      }
+    }
+
+    &-title {
+      font-size: 1.7rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 2rem;
+      text-align: left;
+
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+      justify-content: center;
+
+      margin-top: 3.8rem;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &:not(:last-of-type) {
+          margin-bottom: 0.8rem;
+        }
+
+        li {
+          font-size: 1.4rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 1.7rem;
+
+          margin-left: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__deal {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 4.4rem;
+
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem;
+    color: $main-orange;
+    animation: glow 2s infinite linear;
+    -webkit-animation: glow 2s linear infinite;
+
+    @include above($mobile) {
+      font-size: 2.2rem;
+      line-height: 26px;
+      align-items: flex-start;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+
+      &-bold {
+        font-weight: 900;
+
+        margin-right: 0.7rem;
+      }
+
+      &-normal {
+        padding-top: 0.2rem;
+      }
+    }
+  }
+
+  &__score {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    margin-top: 5rem;
+
+    @include above($mobile) {
+      align-items: flex-start;
+    }
+
+    &-image {
+      order: 2;
+      margin-top: 4rem;
+      align-self: center;
+
+      @include above($mobile) {
+        position: absolute;
+        left: 37.6rem;
+        top: 1rem;
+      }
+
+      @include above($tablet) {
+        left: 46.6rem;
+      }
+    }
+
+    &-info {
+      width: 100%;
+      height: auto;
+
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.8rem;
+      text-align: center;
+
+      @include above($mobile) {
+        width: 45rem;
+        text-align: left;
+      }
+
+      span {
+        color: $main-orange;
+        font-weight: 700;
+      }
+    }
+
+    &-block {
+      display: flex;
+      align-items: center;
+
+      margin-top: 3.6rem;
+
+      &-btn {
+        width: 27.5rem;
+        height: 6.2rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: linear-gradient(180deg, $lighter-orange 0%, $main-orange 100%);
+        box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.6);
+        border-radius: 6rem;
+        border: none;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.9rem;
+        color: #FFFFFF;
+        text-shadow: 0 0 0.4rem $dark-orange;
+        transition: background .25s;
+
+        span {
+          font-size: 1.5rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 1.9rem;
+        }
+
+        &:hover {
+          background: linear-gradient(180deg, $lighter-orange 0%, $lighter-orange 100%);
+        }
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      &-image {
+        display: none;
+
+        @include above($tablet) {
+          display: flex;
+          margin-left: 2.2rem;
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes glow {
+  0% {
+    text-shadow: 0 0 40px $light-orange, 0 0 5px #FFFFFF, 0 0 40px $light-orange, 0 0 5px #FFFFFF, 0 0 40px $light-orange, 0 0 5px #FFFFFF, 0 0 40px $light-orange;
+  }
+  25% {
+      text-shadow: 0 0 5px #FFFFFF, 0 0 20px $light-orange, 0 0 5px #FFFFFF, 0 0 20px $light-orange, 0 0 5px #FFFFFF, 0 0 20px $light-orange, 0 0 5px #FFFFFF, 0 0 20px $light-orange;
+    }
+  50% {
+      text-shadow: 0 0 5px #FFFFFF, 0 0 10px $light-orange;
+    }
+  75% {
+      text-shadow: 0 0 5px #FFFFFF, 0 0 20px $light-orange, 0 0 5px #FFFFFF, 0 0 20px $light-orange, 0 0 5px #FFFFFF, 0 0 20px $light-orange, 0 0 5px #FFFFFF, 0 0 20px $light-orange;
+    }
+  100% {
+       text-shadow: 0 0 5px #FFFFFF, 0 0 40px $light-orange, 0 0 5px #FFFFFF, 0 0 40px $light-orange, 0 0 5px #FFFFFF, 0 0 40px $light-orange, 0 0 5px #FFFFFF, 0 0 40px $light-orange;
+     }
+}
+

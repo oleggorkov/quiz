@@ -1,0 +1,99 @@
+.teaser {
+  width: 100%;
+  height: 35rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: -5.9rem;
+
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.6rem;
+  background: $helper-gray;
+  -webkit-animation: move-y 2s ease infinite;
+
+  @include above($mid-desktop) {
+    width: 121.2rem;
+  }
+
+  &__title {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 3.1rem;
+
+    @include above($mobile) {
+      flex-direction: row;
+      margin-top: 6.1rem;
+    }
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: $main-black;
+
+      @include above($tablet) {
+        width: 3.4rem;
+        height: 4.4rem;
+      }
+
+      @include above($desktop) {
+        width: 4.4rem;
+        height: 5.4rem;
+      }
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 2.6rem;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.22);
+
+      margin-left: 1rem;
+
+      @include above($tablet) {
+        font-size: 3rem;
+        line-height: 4.6rem;
+        margin-left: 2rem;
+      }
+
+      @include above($desktop) {
+        font-size: 4rem;
+        line-height: 5.6rem;
+      }
+    }
+  }
+}
+
+.section__wrap {
+  width: 100%;
+  max-width: 150rem;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  padding: 0 2rem;
+}
+
+@-webkit-keyframes move-y {
+  0%,to {
+   top: -9.7rem;
+  }
+  50% {
+    top: 0;
+  }
+}

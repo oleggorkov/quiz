@@ -1,0 +1,68 @@
+//reset default styles
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#app{
+  height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+
+  background: url("../img/background-1.png") no-repeat center bottom;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: 'Museo Sans', sans-serif;
+
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #FFFFFF;
+}
+
+input,textarea,button,input::placeholder{
+  font-family: 'Museo Sans', sans-serif;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  transition: color ease 0.25s, background ease 0.25s, border ease 0.25s;
+}
+
+ul{
+  list-style: none;
+}
+
+svg{
+  transition: fill ease 0.25s, stroke ease 0.25s;
+}
+
+button{
+  transition: color ease 0.25s;
+}
+
+//main classes
+
+//v-cloak - данные блок отвечает за отключение vue отображения vue когда, до его компиляции. Этот код необходим для
+// избежания визуальных артефактов.
+[v-cloak] {
+  display: none!important;
+}

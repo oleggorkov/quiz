@@ -1,0 +1,158 @@
+.header {
+  width: 100%;
+  max-width: 121.2rem;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @include above($tablet) {
+      padding: 0 2rem;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    max-width: 146rem;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__row {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include above($mobile) {
+      padding-top: 4.2rem;
+    }
+  }
+
+  .header__block {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .header__logo {
+    width: 14rem;
+    height: 12rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include above($mobile) {
+      width: auto;
+      height: auto;
+    }
+
+    @include above($tablet) {
+      width: 20rem;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .header__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    margin-left: 2.5rem;
+
+    span {
+      display: none;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.8rem;
+      color: $main-black;
+
+      @include above($tablet) {
+        display: flex;
+      }
+    }
+  }
+
+  .header__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    span {
+      font-size: 1.3rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.8rem;
+
+      margin-top: 0.3rem;
+
+      position: relative;
+
+      @include above($tablet) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+      }
+
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        top: 0.4rem;
+        left: -1.7rem;
+        background: radial-gradient(50% 50% at 50% 50%, $light-green 0%, $dark-green 100%);
+
+        @include above($tablet) {
+          top: 0.7rem;
+        }
+      }
+    }
+  }
+
+  .header__phone {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.7rem;
+    color: $main-black;
+
+    text-decoration: none;
+
+    @include above($tablet) {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
