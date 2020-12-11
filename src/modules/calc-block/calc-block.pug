@@ -42,7 +42,7 @@ block calc-block
                             label(for='callme') Перезвоните, у меня остались вопросы
                     .calc-block__content-info Введите номер телефона и<br> получите расчет кухни в 3-х комплектациях
                     form(action='mail.php' method='POST').calc-block__content-btn
-                        input(type='tel' name='user_phone' placeholder='_(___)___-__-__' id='phone')
+                        input(type='tel' name='user_phone' value="+7(___)___-__-__" id='phone').input-phone
                         button(type='submit').calc-block__content-btn-rezult получить результат
                         img(src='img/arrow-right.png')
                     .calc-block__content-spinner
